@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23/02/2021, 07:43:22 PM
+    Author     : jimmy zea
+*/
+
+html{
+    font-family: Franklin Gothic Medium;
+    font-size: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+.page-header {
+  padding: 0.75px 1.25px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.125);
+}
+
+.p3{
+    background-color: #0a5;
+}
