@@ -26,12 +26,14 @@ public class ControlDB extends HttpServlet {
     private Management mng;
 
     public ControlDB() {
+       // mng = new Management();
+
         try {
             mng = new Management();
             mng.loadVehicles();
         } catch (SQLException ex) {
             Logger.getLogger(ControlDB.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }        
     }
 
     /**
@@ -53,6 +55,7 @@ public class ControlDB extends HttpServlet {
                 case "0":
                     out.println(new Gson().toJson(mng.getVehicles()));
                     break;
+
             }
         }
     }

@@ -16,16 +16,23 @@ import java.util.Collections;
  * @author jimmy zea
  */
 public class Management {
-    
+
     private ArrayList<Vehicle> vehicles;
-    
+
     private VehicleDAO vdao;
 
     public Management() {
         vehicles = new ArrayList<>();
-        vdao = new VehicleDAO();                 
+        vdao = new VehicleDAO();
+
+        vehicles.add(new Vehicle("HDS988", "AUDI", "2020", "150000000", "1", "negro", "deportivo"));
+        vehicles.add(new Vehicle("HDS988", "RENAULT", "2021", "100000000", "2", "azul", "campero"));
+        vehicles.add(new Vehicle("JDU334", "FERRARI", "2021", "320000000", "3", "azul", "deportivo"));
+        vehicles.add(new Vehicle("OSD832", "AUDI", "2022", "250000000", "5", "blanco", "deportivo"));
+        vehicles.add(new Vehicle("JSD830", "FERRARI", "2022", "190000000", "5", "rojo", "gt"));
+
     }
-    
+
     public void loadVehicles() throws SQLException {
         ResultSet rs = vdao.loadVehicles();
         while (rs.next()) {
@@ -40,6 +47,7 @@ public class Management {
             vehicles.add(new Vehicle(license_plate, mark, model, price, amount, color, category));
         }
     }
+
     public ArrayList<Vehicle> getVehicles() {
 
         Collections.sort(vehicles, (o1, o2) -> {
@@ -48,8 +56,6 @@ public class Management {
 
         return (ArrayList<Vehicle>) vehicles.clone();
 
-    }    
-    
-    
-    
+    }
+
 }

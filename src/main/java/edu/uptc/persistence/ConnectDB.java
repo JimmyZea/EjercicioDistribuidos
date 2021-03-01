@@ -20,7 +20,7 @@ public class ConnectDB {
     private final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private Connection connection;
     //private final String URL = "jdbc:mysql://localhost:3306/project?useTimezone=true&serverTimezone=UTC";
-    private final String URL = "jdbc:mysql://2.tcp.ngrok.io:11115/distributed?useTimezone=true&serverTimezone=UTC";
+    private final String URL = "jdbc:mysql://2.tcp.ngrok.io:15521/distributed?useTimezone=true&serverTimezone=UTC";
     private final String USER = "root";
     private final String PASSWORD = "";
 

@@ -5,6 +5,7 @@
  */
 package edu.uptc.persistence;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -23,8 +24,11 @@ public class VehicleDAO {
 
     public ResultSet loadVehicles() throws SQLException {
         if (connect.isConnect()) {
-            Statement statement = connect.getConnection().createStatement();
-            return statement.executeQuery("select * from vehicles");
+            String sql = "select * from vehicles";
+            PreparedStatement pt = connect.getConnection().prepareCall(sql);
+            //Statement statement = connect.getConnection().createStatement();
+            //return pt.executeQuery("select * from vehicles");
+            return pt.executeQuery();
         }
 
         return null;
